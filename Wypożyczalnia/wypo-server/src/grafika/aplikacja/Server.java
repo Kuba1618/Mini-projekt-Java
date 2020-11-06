@@ -40,7 +40,6 @@ public class Server {
                         for(int i = 0; i < texts.size(); i++) {
                             pr.println(texts.get(i));
                         }
-
                         pr.flush();
                         pr.close();
                     }
