@@ -19,21 +19,11 @@ public class Garaz {
         return garaz.size();
     }
 
-    public void wyswietlGaraz(Garaz garaz) {
-        for (int i = 0; i < garaz.ileAut(); i++) {
-            Auto autko = garaz.getAuto(i);
-
-            String jestHak;
-            if (autko.getHak()) {
-                jestHak = "tak";
-            } else {
-                jestHak = "nie";
-            }
-
-            System.out.print("Marka: " + autko.getMarka() + "  Model: " + autko.getModel() +
-                    "  Nr rejestracyjny: " + autko.getRejestracja() + "  Rok produkcji: " + autko.getRocznik() +
-                    "  Paliwo: " + autko.getPaliwo() + "  Hak: " + jestHak);
-            System.out.println();
+    public void wyswietlGaraz() {
+        System.out.println("Garaż: ");
+        for (int i = 0; i < garaz.size(); i++) {
+            Auto autko = this.getAuto(i);
+            autko.wyswietlAuto();
         }
         System.out.println();
     }

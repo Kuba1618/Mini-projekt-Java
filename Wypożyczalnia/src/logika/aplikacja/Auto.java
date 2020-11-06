@@ -38,12 +38,15 @@ public class Auto {
     }
 
     public void wyswietlAuto() {
-        System.out.print("Marka:" + this.marka + "  Model:" + this.model + "  NrRejestracyjny:" + this.rejestracja +
-                 "  Rocznik: " + this.rocznik + "  Paliwo:" +  this.rodzajPaliwa);
-        if (this.maHaka == true) {
-            System.out.println(" (Samochód ma haka)");
+        String jestHak;
+        if (this.getHak()) {
+            jestHak = "tak";
         } else {
-            System.out.println(" (Samochód nie ma haka)");
+            jestHak = "nie";
         }
+
+        System.out.println("Marka: " + this.getMarka() + "  Model: " + this.getModel() +
+                "  Nr rejestracyjny: " + this.getRejestracja() + "  Rok produkcji: " + this.getRocznik() +
+                "  Paliwo: " + this.getPaliwo() + "  Hak: " + jestHak);
     }
 }

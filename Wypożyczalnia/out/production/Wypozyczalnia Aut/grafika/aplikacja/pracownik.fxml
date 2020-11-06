@@ -30,23 +30,23 @@
                                         <Font size="16.0" />
                                     </font>
                                 </Label>
-                                <RadioButton fx:id="womanRadioButtonZ1" layoutX="36.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="110.0" text="kobieta">
+                                <RadioButton fx:id="womanRadioButtonZ1" layoutX="19.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="110.0" text="kobieta">
                                     <font>
                                         <Font size="13.0" />
                                     </font></RadioButton>
-                                <CheckBox fx:id="acceptBoxZ1" layoutX="200.0" layoutY="332.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Akceptuję regulamin">
+                                <CheckBox fx:id="acceptBoxZ1" layoutX="194.0" layoutY="332.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" text="Akceptuję regulamin">
                                     <font>
                                         <Font size="13.0" />
                                     </font></CheckBox>
-                                <RadioButton fx:id="manRadioButtonZ1" layoutX="126.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="mężczyzna">
+                                <RadioButton fx:id="manRadioButtonZ1" layoutX="129.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="mężczyzna">
                                     <font>
                                         <Font size="13.0" />
                                     </font></RadioButton>
-                                <Button fx:id="registerButtonZ1" layoutX="200.0" layoutY="367.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="144.0" text="Zarejestruj">
+                                <Button fx:id="registerButtonZ1" layoutX="194.0" layoutY="367.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="150.0" text="Zarejestruj">
                                     <font>
                                         <Font size="14.0" />
                                     </font></Button>
-                                <Label fx:id="genderLabelZ1" layoutX="28.0" layoutY="244.0" prefHeight="35.0" prefWidth="50.0" text="  Płeć">
+                                <Label fx:id="genderLabelZ1" layoutX="10.0" layoutY="245.0" prefHeight="35.0" prefWidth="50.0" text="  Płeć">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -103,7 +103,7 @@
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="addButton1" layoutX="202.0" layoutY="360.0" mnemonicParsing="false" onAction="#addCar" prefHeight="41.0" prefWidth="123.0" text="Dodaj" />
+                                        <Button fx:id="addButton1" layoutX="180.0" layoutY="359.0" mnemonicParsing="false" onAction="#addCar" prefHeight="41.0" prefWidth="145.0" text="Dodaj" />
                                     </children>
                                 </Pane>
                             </children>
@@ -144,7 +144,7 @@
                                     <font>
                                         <Font size="13.0" />
                                     </font></CheckBox>
-                                <Button fx:id="checkButtonZ2" layoutX="220.0" layoutY="367.0" mnemonicParsing="false" onAction="#checkOffer" prefHeight="39.0" prefWidth="116.0" text="Sprawdź">
+                                <Button fx:id="checkButtonZ2" layoutX="196.0" layoutY="367.0" mnemonicParsing="false" onAction="#checkOffer" prefHeight="39.0" prefWidth="138.0" text="Sprawdź">
                                     <font>
                                         <Font size="14.0" />
                                     </font></Button>
@@ -176,9 +176,9 @@
                                             </font>
                                         </Label>
                                         <DatePicker fx:id="borrowDatePicker2" layoutX="186.0" layoutY="126.0" prefHeight="31.0" prefWidth="150.0" promptText="25/04/2020" />
-                                        <Label fx:id="borrowDate2" layoutX="25.0" layoutY="124.0" prefHeight="36.0" prefWidth="145.0" text="  Data wypożyczenia">
+                                        <Label fx:id="borrowDate2" layoutX="20.0" layoutY="124.0" prefHeight="36.0" prefWidth="155.0" text="  Data wypożyczenia">
                                             <font>
-                                                <Font size="16.0" />
+                                                <Font size="17.0" />
                                             </font>
                                         </Label>
                                         <Label fx:id="backDate2" layoutX="35.0" layoutY="171.0" prefHeight="36.0" prefWidth="124.0" text="   Data zwrotu">
@@ -193,7 +193,7 @@
                                             </font>
                                         </Label>
                                         <TextField fx:id="nameFieldW2" layoutX="186.0" layoutY="223.0" prefHeight="31.0" prefWidth="150.0" promptText="                Krzysztof" />
-                                        <Button fx:id="hireButton2" layoutX="195.0" layoutY="367.0" mnemonicParsing="false" onAction="#hireCar" prefHeight="41.0" prefWidth="141.0" text="Wypożycz" />
+                                        <Button fx:id="hireButton2" layoutX="186.0" layoutY="367.0" mnemonicParsing="false" onAction="#hireCar" prefHeight="41.0" prefWidth="150.0" text="Wypożycz" />
                               <Label fx:id="lastNameLabelW2" layoutX="50.0" layoutY="265.0" prefHeight="36.0" prefWidth="80.0" text="Nazwisko">
                                  <font>
                                     <Font size="18.0" />

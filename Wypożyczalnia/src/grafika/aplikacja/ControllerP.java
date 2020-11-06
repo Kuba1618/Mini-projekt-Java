@@ -1,10 +1,13 @@
 package grafika.aplikacja;
 
 import logika.aplikacja.Garaz;
+import logika.aplikacja.KatalogWypozyczen;
+import logika.aplikacja.Spolecznosc;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
 import java.sql.Date;
 
 
@@ -12,6 +15,8 @@ import java.sql.Date;
 public class ControllerP {
 
     Garaz garaz = new Garaz();
+    Spolecznosc spolecznosc = new Spolecznosc();
+    KatalogWypozyczen katalog = new KatalogWypozyczen();
 
     ObservableList<String> marka = FXCollections.observableArrayList("Fiat","Opel","Skoda","Toyota","VolksWagen");
     ObservableList<String> model = FXCollections.observableArrayList("Tipo","Astra H","Octavia","Yaris","Golf IV");
@@ -27,9 +32,9 @@ public class ControllerP {
     private ChoiceBox modelCarChoise2,modelCarChoiseZ2;
     //---------------TextField------------------------
     @FXML
-    private TextField carBrandField1,modelField1,registrationNumberField1,yearField1,nameFieldW2;
+    private TextField carBrandField1,modelField1,registrationNumberField1,yearField1;
     @FXML
-    private TextField nameFieldZ1,lastNameFieldZ1,phoneFieldZ1,peselFieldZ11,peselNumberField2;
+    private TextField nameFieldZ1,lastNameFieldZ1,phoneFieldZ1,peselFieldZ11,peselNumberField2,nameFieldW2,lastNameFieldW2;
     //--------------DatePicker------------------
     @FXML
     private DatePicker borrowDatePicker2,backDatePicker2,dateOfBirthCalendarZ1;
@@ -71,33 +76,38 @@ public class ControllerP {
         Date dataUro = Date.valueOf(dateOfBirthCalendarZ1.getValue());
         long nrPesel = Long.valueOf(String.valueOf(peselFieldZ11.getCharacters()));
         boolean kobieta = womanRadioButtonZ1.isSelected(),facet = manRadioButtonZ1.isSelected();
+        char plec = 'M';
         if(acceptBoxZ1.isSelected())
         {
             System.out.println("Zarejestrowano:");
-            System.out.print("  Imie: " + imie + "  Nazwisko: " + nazwisko + "  Telefon: " + nrTel +
-                    "  Data urodzin: " + dataUro + "  Pesel: " + nrPesel);
 
-            System.out.print("  Płeć:");
             if(kobieta && facet == false){
-                System.out.println(womanRadioButtonZ1.getText());
+                plec = 'K';
             }
             else if(facet && kobieta == false){
-                System.out.println(manRadioButtonZ1.getText());
+                plec = 'M';
             }
             else if(kobieta && facet) {
                 manRadioButtonZ1.fire();
-                System.out.println(womanRadioButtonZ1.getText());
+                plec = 'K';
             }
             else
             {
                 manRadioButtonZ1.fire();
-                System.out.println(manRadioButtonZ1.getText());
+                plec = 'M';
             }
+            //--------------------Symulacja--bazy---------------------------
+            spolecznosc.addPerson("Jan1","Kowalski1",123456789, Date.valueOf("1999-05-28"),12345678910L,'M');
+            spolecznosc.addPerson("Jan1","Kowalski1",125601782, Date.valueOf("1997-01-17"),12345678911L,'K');
+            spolecznosc.addPerson("Jan2","Kowalski2",987654321, Date.valueOf("1998-09-30"),12345678912L,'M');
+            //--------------------KONIEC--SYMULACJI--------------------------
+            spolecznosc.addPerson(imie,nazwisko,nrTel,dataUro,nrPesel,plec);
         }
         else
         {
             System.out.println("Akceptacja regulaminu jest obowiązkowa!");
         }
+        spolecznosc.wyswietlSpolecznosc();
     }
 
     @FXML
@@ -115,7 +125,7 @@ public class ControllerP {
         garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
         //--------------------------------------KONIEC--SYMULACJI-------------------------------------------------------
         garaz.dodajAuto(marka,model,nrRejestracyjny,rocznik,fuel,hak);
-        garaz.wyswietlGaraz(garaz);
+        garaz.wyswietlGaraz();
     }
 
     @FXML
@@ -148,12 +158,18 @@ public class ControllerP {
         Date dataWypozyczenia = Date.valueOf(borrowDatePicker2.getValue());
         Date dataOddania = Date.valueOf(backDatePicker2.getValue());
         String imieWyp = String.valueOf(nameFieldW2.getCharacters());
-        String nazwiskoWyp = String.valueOf(lastNameFieldZ1.getCharacters());
+        String nazwiskoWyp = String.valueOf(lastNameFieldW2.getCharacters());
         Long peselWyp = Long.valueOf(String.valueOf(peselNumberField2.getCharacters()));
-
-        System.out.println("Marka:" + marka + "  Model:" + model + "  Data Wypożyczenia:" + dataWypozyczenia +
-                "  Data oddania:" + dataOddania + "  Imie wypożyczającego: " + imieWyp +
-                "  Nazwisko wypożyczającego: " + nazwiskoWyp + "  Pesel wypożyczającego: " + peselWyp);
+        //----------------Symulacja--bazy-------------------------------------------------------------------------------
+        katalog.dodajWypozyczenie("Opel","Astra H",Date.valueOf("1999-05-28"),Date.valueOf("1999-05-30"),
+                "Jan","Nowak",12345678910L);
+        katalog.dodajWypozyczenie("Skoda","Octavia",Date.valueOf("2003-05-28"),Date.valueOf("2008-05-30"),
+                "Robert","Kowalski",93345678910L);
+        katalog.dodajWypozyczenie("Audi","A4",Date.valueOf("2000-05-28"),Date.valueOf("2000-05-30"),
+                "Stanislaw","Rak",12345654910L);
+        //-------------------koniec---symulacji-------------------------------------------------------------------------
+        katalog.dodajWypozyczenie(marka,model,dataWypozyczenia,dataOddania,imieWyp,nazwiskoWyp,peselWyp);
+        katalog.wyswietlKatalogWypozyczen();
     }
 
 
