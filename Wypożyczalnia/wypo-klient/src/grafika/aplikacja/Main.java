@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import logika.aplikacja.DataBaseConnect;
 
+import java.sql.Date;
+
 
 public class Main extends Application {
 
@@ -21,6 +23,8 @@ public class Main extends Application {
         launch(args);
         DataBaseConnect connection = new DataBaseConnect();
         connection.getData();
+        connection.setData(117,"Agnieszka","Doborowicz",465219872, Date.valueOf("1988-05-02"),12395432876l,'k');//117,"Agnieszka","Doborowicz",465219872, Date.valueOf("1988-05-02"),46579813128l,'k'
     }
+
 }
 
