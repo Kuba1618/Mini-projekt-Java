@@ -22,8 +22,7 @@ public class ControllerZ {
     @FXML
     private void initialize(){
         //wybór marki
-
-         brandCarChoiseZ2.setValue("VolksWagen");
+        brandCarChoiseZ2.setValue("VolksWagen");
         brandCarChoiseZ2.setItems(marka);
 
         //wybór modelu

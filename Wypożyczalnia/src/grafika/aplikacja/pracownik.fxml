@@ -31,20 +31,20 @@
                                         <TextField fx:id="carBrandField1" layoutX="134.0" layoutY="35.0" prefHeight="31.0" prefWidth="135.0" promptText="Honda" />
                                         <TextField fx:id="modelField1" layoutX="134.0" layoutY="80.0" prefHeight="31.0" prefWidth="135.0" promptText="CRV" />
                                         <TextField fx:id="registrationNumberField1" layoutX="134.0" layoutY="138.0" prefHeight="31.0" prefWidth="135.0" promptText="ABC 12345" />
-                                        <Label fx:id="Colour1" layoutX="36.0" layoutY="187.0" prefHeight="37.0" prefWidth="57.0" text=" Kolor">
+                                        <Label fx:id="year1" layoutX="14.0" layoutY="187.0" prefHeight="37.0" prefWidth="115.0" text="Rok produkcji">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="colourField1" layoutX="134.0" layoutY="190.0" prefHeight="31.0" prefWidth="135.0" promptText="  czarny metalik" />
-                                        <CheckBox fx:id="haveHookCheckBox1" layoutX="35.0" layoutY="317.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="hak" />
+                                        <TextField fx:id="yearField1" layoutX="134.0" layoutY="190.0" prefHeight="31.0" prefWidth="135.0" text="2019" />
+                                        <CheckBox fx:id="haveHookBox1" layoutX="35.0" layoutY="317.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="hak" />
                                         <ChoiceBox fx:id="fuelChoise1" layoutX="134.0" layoutY="244.0" prefHeight="31.0" prefWidth="135.0" />
                                         <Label fx:id="kindOfFuel1" layoutX="13.0" layoutY="240.0" prefHeight="39.0" prefWidth="102.0" text="Rodzaj paliwa">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="addButton1" layoutX="135.0" layoutY="373.0" mnemonicParsing="false" onAction="#wyswietlKomunikat" prefHeight="31.0" prefWidth="134.0" text="Dodaj" />
+                                        <Button fx:id="addButton1" layoutX="135.0" layoutY="373.0" mnemonicParsing="false" onAction="#saveCar" prefHeight="31.0" prefWidth="134.0" text="Dodaj" />
                                     </children>
                                 </Pane>
                                 <Pane layoutX="322.0" layoutY="1.0" prefHeight="439.0" prefWidth="318.0" />
@@ -70,25 +70,25 @@
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <DatePicker fx:id="borrowDate2" layoutX="144.0" layoutY="134.0" prefHeight="31.0" prefWidth="162.0" />
-                                        <Label fx:id="borrowDate2" layoutX="9.0" layoutY="131.0" prefHeight="36.0" prefWidth="123.0" text="Data wypożyczenia">
+                                        <DatePicker fx:id="borrowDatePicker2" layoutX="144.0" layoutY="134.0" prefHeight="31.0" prefWidth="162.0" promptText="25/04/2020" />
+                                        <Label fx:id="borrowDate2" layoutX="1.0" layoutY="131.0" prefHeight="36.0" prefWidth="141.0" text="  Data wypożyczenia">
                                             <font>
-                                                <Font size="14.0" />
+                                                <Font size="15.0" />
                                             </font>
                                         </Label>
-                                        <Label fx:id="backDate2" layoutX="2.0" layoutY="194.0" prefHeight="36.0" prefWidth="138.0" text="    Data zwrotu">
+                                        <Label fx:id="backDate2" layoutX="2.0" layoutY="194.0" prefHeight="36.0" prefWidth="138.0" text="      Data zwrotu">
                                             <font>
-                                                <Font size="16.0" />
+                                                <Font size="15.0" />
                                             </font>
                                         </Label>
-                                        <DatePicker fx:id="backDate2" layoutX="143.0" layoutY="196.0" prefHeight="31.0" prefWidth="165.0" />
+                                        <DatePicker fx:id="backDatePicker2" layoutX="143.0" layoutY="196.0" prefHeight="31.0" prefWidth="165.0" promptText="28/04/2020" />
                                         <Label fx:id="idNumber2" layoutX="6.0" layoutY="251.0" prefHeight="36.0" prefWidth="130.0" text=" ID wypożyczającego">
                                             <font>
                                                 <Font size="14.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="idendityField2" layoutX="147.0" layoutY="254.0" prefHeight="31.0" prefWidth="161.0" />
-                                        <Button fx:id="hireButton2" layoutX="147.0" layoutY="356.0" mnemonicParsing="false" onAction="#wyswietlKomunikat" prefHeight="41.0" prefWidth="160.0" text="Wypożycz" />
+                                        <TextField fx:id="idendityField2" layoutX="143.0" layoutY="254.0" prefHeight="31.0" prefWidth="165.0" text="123456789" />
+                                        <Button fx:id="hireButton2" layoutX="147.0" layoutY="356.0" mnemonicParsing="false" onAction="#hireCar" prefHeight="41.0" prefWidth="160.0" text="Wypożycz" />
                                     </children>
                                 </Pane>
                             </children>
@@ -118,17 +118,17 @@
                                     <Font size="15.0" />
                                  </font></Label>
                                         <ChoiceBox fx:id="registerNumberChoise3" layoutX="133.0" layoutY="251.0" prefHeight="32.0" prefWidth="131.0" />
-                                        <Label fx:id="carBrand3" layoutX="74.0" layoutY="14.0" prefHeight="37.0" prefWidth="98.0" text="   Wybierz">
+                                        <Label fx:id="chooseLabel" layoutX="74.0" layoutY="14.0" prefHeight="37.0" prefWidth="98.0" text="   Wybierz">
                                             <font>
                                                 <Font name="System Bold Italic" size="16.0" />
                                             </font>
                                         </Label>
-                                        <Label fx:id="carBrand3" layoutX="74.0" layoutY="190.0" prefHeight="37.0" prefWidth="98.0" text="        lub">
+                                        <Label fx:id="orLabel" layoutX="74.0" layoutY="190.0" prefHeight="37.0" prefWidth="98.0" text="        lub">
                                             <font>
                                                 <Font name="System Bold Italic" size="16.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="findButton3" layoutX="159.0" layoutY="366.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="112.0" text="Wyszukaj" />
+                                        <Button fx:id="findButton3" layoutX="159.0" layoutY="366.0" mnemonicParsing="false" onAction="#checkCar" prefHeight="43.0" prefWidth="112.0" text="Wyszukaj" />
                                     </children>
                                 </Pane>
                             </children>
