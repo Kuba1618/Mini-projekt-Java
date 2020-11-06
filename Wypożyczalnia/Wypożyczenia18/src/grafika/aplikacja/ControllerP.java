@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.sql.Date;
-
+import java.util.List;
 
 
 public class ControllerP {
@@ -103,11 +103,11 @@ public class ControllerP {
                 plec = 'M';
             }
             //--------------------Symulacja--bazy---------------------------
-            spolecznosc.addPerson("Jan1","Kowalski1",123456789, Date.valueOf("1999-05-28"),12345678910L,'M');
-            spolecznosc.addPerson("Jan1","Kowalski1",125601782, Date.valueOf("1997-01-17"),12345678911L,'K');
-            spolecznosc.addPerson("Jan2","Kowalski2",987654321, Date.valueOf("1998-09-30"),12345678912L,'M');
+         //   spolecznosc.addPerson("Jan1","Kowalski1",123456789, Date.valueOf("1999-05-28"),12345678910L,'M');
+        //    spolecznosc.addPerson("Jan1","Kowalski1",125601782, Date.valueOf("1997-01-17"),12345678911L,'K');
+         //   spolecznosc.addPerson("Jan2","Kowalski2",987654321, Date.valueOf("1998-09-30"),12345678912L,'M');
             //--------------------KONIEC--SYMULACJI--------------------------
-            spolecznosc.addPerson(imie,nazwisko,nrTel,dataUro,nrPesel,plec);
+         //   spolecznosc.addPerson(imie,nazwisko,nrTel,dataUro,nrPesel,plec);
         }
         else
         {
@@ -119,6 +119,10 @@ public class ControllerP {
 
         Client client = new Client("127.0.0.1", 5590);
         client.send(imie + " " + nazwisko + " " + nrTel + " " + dataUro + " " + nrPesel + " " + plec);
+
+        List x = client.read();
+        for(int i = 0; i < x.size(); i++) {
+        System.out.println("server: " + x.get(i)); }
     }
 
     @FXML
@@ -131,9 +135,9 @@ public class ControllerP {
         boolean hak = haveHookBox1.isSelected();
 
         //-------------------------Samochody w bazie(symulacja bazy)----------------------------------------------------
-        garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
+      /*  garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
         garaz.dodajAuto("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
-        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
+        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false); */
         //--------------------------------------KONIEC--SYMULACJI-------------------------------------------------------
         garaz.dodajAuto(marka,model,nrRejestracyjny,rocznik,fuel,hak);
         garaz.wyswietlGaraz();
@@ -147,6 +151,10 @@ public class ControllerP {
 
         Client client = new Client("127.0.0.1", 5590);
         client.send(marka + " " + model + " " + nrRejestracyjny + " " + "został dodany");
+
+        List x = client.read();
+        for(int i = 0; i < x.size(); i++) {
+            System.out.println("server: " + x.get(i)); }
     }
 
     @FXML
@@ -158,7 +166,7 @@ public class ControllerP {
         boolean narty = bagaznikNartyBoxZ2.isSelected();
         boolean ubezpieczenie = extraInsuaranceBoxZ2.isSelected();
 
-        System.out.print("Marka:" + marka + "  Model:" + model + "  Ilosc dni:" + iloscDob);
+/*        System.out.print("Marka:" + marka + "  Model:" + model + "  Ilosc dni:" + iloscDob);
         System.out.print("  Dodatkowe:");
         if(fotelik || narty || ubezpieczenie) {
             if(fotelik) System.out.print("fotelik,");
@@ -168,7 +176,7 @@ public class ControllerP {
         }
         else {
             System.out.println(" brak");
-        }
+        }*/
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Informacja");
@@ -179,6 +187,10 @@ public class ControllerP {
 
         Client client = new Client("127.0.0.1", 5590);
         client.send(marka + " " + model + " na " + iloscDob + " dni " + "kosztuję: ");
+
+        List x = client.read();
+        for(int i = 0; i < x.size(); i++) {
+            System.out.println("server: " + x.get(i)); }
     }
 
     @FXML
@@ -191,15 +203,15 @@ public class ControllerP {
         String nazwiskoWyp = String.valueOf(lastNameFieldW2.getCharacters());
         Long peselWyp = Long.valueOf(String.valueOf(peselNumberField2.getCharacters()));
         //----------------Symulacja--bazy-------------------------------------------------------------------------------
-        katalog.dodajWypozyczenie("Opel","Astra H",Date.valueOf("1999-05-28"),Date.valueOf("1999-05-30"),
+     /*   katalog.dodajWypozyczenie("Opel","Astra H",Date.valueOf("1999-05-28"),Date.valueOf("1999-05-30"),
                 "Jan","Nowak",12345678910L);
         katalog.dodajWypozyczenie("Skoda","Octavia",Date.valueOf("2003-05-28"),Date.valueOf("2008-05-30"),
                 "Robert","Kowalski",93345678910L);
         katalog.dodajWypozyczenie("Audi","A4",Date.valueOf("2000-05-28"),Date.valueOf("2000-05-30"),
-                "Stanislaw","Rak",12345654910L);
+                "Stanislaw","Rak",12345654910L); */
         //-------------------koniec---symulacji-------------------------------------------------------------------------
-        katalog.dodajWypozyczenie(marka,model,dataWypozyczenia,dataOddania,imieWyp,nazwiskoWyp,peselWyp);
-        katalog.wyswietlKatalogWypozyczen();
+    //    katalog.dodajWypozyczenie(marka,model,dataWypozyczenia,dataOddania,imieWyp,nazwiskoWyp,peselWyp);
+    //    katalog.wyswietlKatalogWypozyczen();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Informacja");
@@ -210,6 +222,10 @@ public class ControllerP {
 
         Client client = new Client("127.0.0.1", 5590);
         client.send(marka + " " + model + " od dnia " + dataWypozyczenia + " do dnia " + dataOddania + " został wypożyczony!");
+
+        List x = client.read();
+        for(int i = 0; i < x.size(); i++) {
+            System.out.println("server: " + x.get(i)); }
     }
 
 
