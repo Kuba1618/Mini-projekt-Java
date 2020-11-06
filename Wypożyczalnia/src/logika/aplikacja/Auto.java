@@ -5,15 +5,15 @@ public class Auto {
     String marka;
     String model;
     String rejestracja;
-    int rocznik;
-    double przebieg;
+    String kolor;
+    String rodzajPaliwa;
 
-    public Auto(String marka,String model,String rejestracja,int rocznik,double przebieg){
+    public Auto(String marka,String model,String rejestracja,String kolor,String rodzajPaliwa){
         this.marka = marka;
         this.model = model;
         this.rejestracja = rejestracja;
-        this.rocznik = rocznik;
-        this.przebieg = przebieg;
+        this.kolor = kolor;
+        this.rodzajPaliwa = rodzajPaliwa;
     }
 
 }
