@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="grafika.Controller" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox layoutX="1.0" prefHeight="478.0" prefWidth="687.0">
+            <children>
+                <VBox prefHeight="484.0" prefWidth="382.0">
+                    <children>
+                        <Pane prefHeight="362.0" prefWidth="381.0">
+                            <children>
+                                <TabPane layoutX="-3.0" layoutY="-3.0" prefHeight="477.0" prefWidth="691.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Utwórz konto">
+                                            <content>
+                                                <Pane prefHeight="447.0" prefWidth="732.0">
+                                                    <children>
+                                                        <Label fx:id="name" layoutX="-9.0" layoutY="22.0" prefHeight="33.0" prefWidth="125.0" text="            Imie ">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="nameField" layoutX="126.0" layoutY="22.0" prefHeight="34.0" prefWidth="189.0" />
+                                                        <Label fx:id="lastName" layoutX="-3.0" layoutY="79.0" prefHeight="33.0" prefWidth="112.0" text="       Nazwisko">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="phoneField" layoutX="127.0" layoutY="136.0" prefHeight="37.0" prefWidth="188.0" />
+                                                        <TextField fx:id="LastNameField" layoutX="126.0" layoutY="77.0" prefHeight="34.0" prefWidth="188.0" />
+                                                        <Label fx:id="phoneLabel" layoutX="-9.0" layoutY="128.0" prefHeight="39.0" prefWidth="126.0" text="         Telefon">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton fx:id="womanRadioButton" layoutX="66.0" layoutY="284.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="110.0" text="kobieta" />
+                                                        <CheckBox fx:id="acceptBox" layoutX="155.0" layoutY="367.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="125.0" text="Akceptuję regulain" />
+                                                        <RadioButton fx:id="manRadioButton" layoutX="207.0" layoutY="284.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="mężczyzna" />
+                                                        <Button fx:id="registerButton" layoutX="151.0" layoutY="400.0" mnemonicParsing="false" onAction="#zarejestruj" prefHeight="31.0" prefWidth="167.0" text="Zarejestruj" />
+                                                        <Label fx:id="genderLabel" layoutX="20.0" layoutY="237.0" prefHeight="47.0" prefWidth="94.0" text="    Płeć">
+                                                            <font>
+                                                                <Font size="17.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <DatePicker fx:id="dateChoise" layoutX="140.0" layoutY="201.0" prefHeight="36.0" prefWidth="174.0" />
+                                                        <Label fx:id="dateOfBirth" layoutX="-7.0" layoutY="190.0" prefHeight="47.0" prefWidth="147.0" text="     Data urodzenia">
+                                                            <font>
+                                                                <Font size="17.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Pane layoutX="341.0" prefHeight="450.0" prefWidth="356.0" />
+                                                    </children>
+                                                </Pane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Sprawdź cennik">
+                                            <content>
+                                                <Pane prefHeight="200.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="marka" layoutX="47.0" layoutY="38.0" prefHeight="44.0" prefWidth="58.0" text=" Marka">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ChoiceBox fx:id="markaChoise" layoutX="138.0" layoutY="45.0" prefHeight="31.0" prefWidth="161.0" />
+                                                        <ChoiceBox layoutX="138.0" layoutY="175.0" prefHeight="31.0" prefWidth="159.0" />
+                                                        <ChoiceBox layoutX="137.0" layoutY="111.0" prefHeight="31.0" prefWidth="161.0" />
+                                                        <Label fx:id="model" layoutX="47.0" layoutY="105.0" prefHeight="44.0" prefWidth="58.0" text="Model">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="ilośćDób" layoutX="25.0" layoutY="169.0" prefHeight="44.0" prefWidth="89.0" text="  Ilość dób">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <CheckBox fx:id="ubezpieczenieCheckBox" layoutX="64.0" layoutY="281.0" mnemonicParsing="false" text="Dodatkowe ubezpieczenie" />
+                                                        <CheckBox fx:id="fotelikCheckBox" layoutX="64.0" layoutY="238.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="209.0" text="Fotelik" />
+                                                        <CheckBox fx:id="bagażnikCheckBox" layoutX="64.0" layoutY="318.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="199.0" text="Bagażnik na narty" />
+                                                        <Pane layoutX="324.0" layoutY="3.0" prefHeight="441.0" prefWidth="361.0" />
+                                          <Button fx:id="sprawdźButton" layoutX="114.0" layoutY="369.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="184.0" text="Sprawdź">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                                    </children>
+                                                </Pane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                            </children></Pane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</Pane>
