@@ -2,12 +2,12 @@ package logika.aplikacja;
 
 public class Auto {
 
-    String marka;
-    String model;
-    String rejestracja;
-    int rocznik;
-    String rodzajPaliwa;
-    boolean maHaka;
+    private String marka;
+    private String model;
+    private String rejestracja;
+    private int rocznik;
+    private String rodzajPaliwa;
+    private boolean maHaka;
 
     public Auto(String marka,String model,String rejestracja,int rocznik,String rodzajPaliwa,boolean maHaka){
         this.marka = marka;
@@ -18,4 +18,22 @@ public class Auto {
         this.maHaka = maHaka;
     }
 
+    public String getMarka() {
+        return this.marka;
+    }
+    public String getModel() {
+        return this.model;
+    }
+    public String getRejestracja() {
+        return rejestracja;
+    }
+    public int getRocznik() {
+        return this.rocznik;
+    }
+    public String getPaliwo() {
+        return this.rodzajPaliwa;
+    }
+    public boolean getHak() {
+        return this.maHaka;
+    }
 }
