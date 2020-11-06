@@ -36,6 +36,12 @@ public class Osoba {
     public char getPlec() {
         return this.plec;
     }
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
+    }
+    public void setNrTel(int nrTel) {
+        this.nrTel = nrTel;
+    }
 
     public void wyswietlOsobe() {
         System.out.println("Imie: " + this.getImie() + "  Nazwisko: " + this.getNazwisko() +

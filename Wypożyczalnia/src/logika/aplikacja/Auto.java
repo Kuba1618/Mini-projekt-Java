@@ -37,6 +37,13 @@ public class Auto {
         return this.maHaka;
     }
 
+    public void setRejestracja(String rejestracja) {
+        this.rejestracja = rejestracja;
+    }
+    public void setMaHaka(boolean maHaka) {
+        this.maHaka = maHaka;
+    }
+
     public void wyswietlAuto() {
         String jestHak;
         if (this.getHak()) {
