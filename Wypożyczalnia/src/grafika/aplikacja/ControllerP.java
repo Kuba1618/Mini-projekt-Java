@@ -61,7 +61,7 @@ public class ControllerP {
     }
 
     @FXML
-    private void saveCar(){
+    private void addCar(){
         String marka = String.valueOf(carBrandField1.getCharacters());
         String model = String.valueOf(modelField1.getCharacters());
         String nrRejestracyjny = String.valueOf(registrationNumberField1.getCharacters());
