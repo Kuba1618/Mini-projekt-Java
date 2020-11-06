@@ -1,4 +1,4 @@
-package sample;
+package grafika.aplikacja;
 
 public class Controller {
 }
