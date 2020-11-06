@@ -5,9 +5,9 @@ import java.sql.Date;
 public class Logika {
     public static void main(String[] args) {
         Garaz garaz = new Garaz();
-        garaz.addItem("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
-        garaz.addItem("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
-        garaz.addItem("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
+        garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
+        garaz.dodajAuto("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
+        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
         garaz.wyswietlGaraz(garaz);
 
         Spolecznosc spolecznosc = new Spolecznosc();

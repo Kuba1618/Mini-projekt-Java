@@ -36,4 +36,14 @@ public class Auto {
     public boolean getHak() {
         return this.maHaka;
     }
+
+    public void wyswietlAuto() {
+        System.out.print("Marka:" + this.marka + "  Model:" + this.model + "  NrRejestracyjny:" + this.rejestracja +
+                 "  Rocznik: " + this.rocznik + "  Paliwo:" +  this.rodzajPaliwa);
+        if (this.maHaka == true) {
+            System.out.println(" (Samochód ma haka)");
+        } else {
+            System.out.println(" (Samochód nie ma haka)");
+        }
+    }
 }

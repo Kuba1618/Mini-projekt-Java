@@ -6,7 +6,7 @@ public class Garaz {
 
     private LinkedList<Auto> garaz = new LinkedList<>();
 
-    public void addItem(String marka, String model, String nrRej, int rok, String paliwo, boolean hak) {
+    public void dodajAuto(String marka, String model, String nrRej, int rok, String paliwo, boolean hak) {
         Auto autko = new Auto(marka, model, nrRej, rok, paliwo, hak);
         garaz.add(autko);
     }

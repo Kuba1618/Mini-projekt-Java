@@ -1,17 +1,20 @@
 package grafika.aplikacja;
 
+import logika.aplikacja.Garaz;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
 import java.sql.Date;
+
+
 
 public class ControllerP {
 
+    Garaz garaz = new Garaz();
+
     ObservableList<String> marka = FXCollections.observableArrayList("Fiat","Opel","Skoda","Toyota","VolksWagen");
     ObservableList<String> model = FXCollections.observableArrayList("Tipo","Astra H","Octavia","Yaris","Golf IV");
-    ObservableList<String> rejestracja = FXCollections.observableArrayList("TKI 12345","TK 84GF");
     ObservableList<String> paliwo = FXCollections.observableArrayList("Benzyna","Diesel","Benzyna + LPG");
     ObservableList<String> dni = FXCollections.observableArrayList("10","20","30","50","100");
 
@@ -24,9 +27,9 @@ public class ControllerP {
     private ChoiceBox modelCarChoise2,modelCarChoiseZ2;
     //---------------TextField------------------------
     @FXML
-    private TextField carBrandField1,modelField1,registrationNumberField1,yearField1,idendityField2;
+    private TextField carBrandField1,modelField1,registrationNumberField1,yearField1,nameFieldW2;
     @FXML
-    private TextField nameFieldZ1,lastNameFieldZ1,phoneFieldZ1;
+    private TextField nameFieldZ1,lastNameFieldZ1,phoneFieldZ1,peselFieldZ11,peselNumberField2;
     //--------------DatePicker------------------
     @FXML
     private DatePicker borrowDatePicker2,backDatePicker2,dateOfBirthCalendarZ1;
@@ -61,46 +64,18 @@ public class ControllerP {
     }
 
     @FXML
-    private void addCar(){
-        String marka = String.valueOf(carBrandField1.getCharacters());
-        String model = String.valueOf(modelField1.getCharacters());
-        String nrRejestracyjny = String.valueOf(registrationNumberField1.getCharacters());
-        int rocznik = Integer.parseInt(String.valueOf(yearField1.getCharacters()));
-        String fuel = String.valueOf(fuelChoise1.getValue());
-        boolean hak = haveHookBox1.isSelected();
-
-        System.out.print("Marka:" + marka + "  Model:" + model + "  NrRejestracyjny:" + nrRejestracyjny
-                + "  Rocznik: " + rocznik + "  Paliwo:" +  fuel);
-        if (hak == true) {
-            System.out.println(" (Samochód ma haka)");
-        } else {
-            System.out.println(" (Samochód nie ma haka)");
-        }
-    }
-
-    @FXML
-    private void hireCar(){
-        String marka = String.valueOf(brandCarChoise2.getValue());
-        String model = String.valueOf(modelCarChoise2.getValue());
-        Date dataWypozyczenia = Date.valueOf(borrowDatePicker2.getValue());
-        Date dataOddania = Date.valueOf(backDatePicker2.getValue());
-        int idWypozyczajacego = Integer.parseInt(String.valueOf(idendityField2.getCharacters()));
-
-        System.out.println("Marka:" + marka + "  Model:" + model + "  Data Wypożyczenia:" + dataWypozyczenia +
-                "  Data oddania:" + dataOddania + "  Id wypozyczającego:" + idWypozyczajacego);
-    }
-
-    @FXML
     private void createAccount(){
         String imie = String.valueOf(nameFieldZ1.getCharacters());
         String nazwisko =  String.valueOf(lastNameFieldZ1.getCharacters());
         int nrTel = Integer.parseInt(String.valueOf(phoneFieldZ1.getCharacters()));
         Date dataUro = Date.valueOf(dateOfBirthCalendarZ1.getValue());
+        long nrPesel = Long.valueOf(String.valueOf(peselFieldZ11.getCharacters()));
         boolean kobieta = womanRadioButtonZ1.isSelected(),facet = manRadioButtonZ1.isSelected();
         if(acceptBoxZ1.isSelected())
         {
             System.out.println("Zarejestrowano:");
-            System.out.print("  Imie:" + imie + "  Nazwisko:" + nazwisko + "  Telefon:" + nrTel + "  Data urodzin:" + dataUro);
+            System.out.print("  Imie: " + imie + "  Nazwisko: " + nazwisko + "  Telefon: " + nrTel +
+                    "  Data urodzin: " + dataUro + "  Pesel: " + nrPesel);
 
             System.out.print("  Płeć:");
             if(kobieta && facet == false){
@@ -123,7 +98,24 @@ public class ControllerP {
         {
             System.out.println("Akceptacja regulaminu jest obowiązkowa!");
         }
+    }
 
+    @FXML
+    private void addCar(){
+        String marka = String.valueOf(carBrandField1.getCharacters());
+        String model = String.valueOf(modelField1.getCharacters());
+        String nrRejestracyjny = String.valueOf(registrationNumberField1.getCharacters());
+        int rocznik = Integer.parseInt(String.valueOf(yearField1.getCharacters()));
+        String fuel = String.valueOf(fuelChoise1.getValue());
+        boolean hak = haveHookBox1.isSelected();
+
+        //-------------------------Samochody w bazie(symulacja bazy)----------------------------------------------------
+        garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
+        garaz.dodajAuto("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
+        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
+        //--------------------------------------KONIEC--SYMULACJI-------------------------------------------------------
+        garaz.dodajAuto(marka,model,nrRejestracyjny,rocznik,fuel,hak);
+        garaz.wyswietlGaraz(garaz);
     }
 
     @FXML
@@ -149,6 +141,20 @@ public class ControllerP {
 
     }
 
+    @FXML
+    private void hireCar(){
+        String marka = String.valueOf(brandCarChoise2.getValue());
+        String model = String.valueOf(modelCarChoise2.getValue());
+        Date dataWypozyczenia = Date.valueOf(borrowDatePicker2.getValue());
+        Date dataOddania = Date.valueOf(backDatePicker2.getValue());
+        String imieWyp = String.valueOf(nameFieldW2.getCharacters());
+        String nazwiskoWyp = String.valueOf(lastNameFieldZ1.getCharacters());
+        Long peselWyp = Long.valueOf(String.valueOf(peselNumberField2.getCharacters()));
+
+        System.out.println("Marka:" + marka + "  Model:" + model + "  Data Wypożyczenia:" + dataWypozyczenia +
+                "  Data oddania:" + dataOddania + "  Imie wypożyczającego: " + imieWyp +
+                "  Nazwisko wypożyczającego: " + nazwiskoWyp + "  Pesel wypożyczającego: " + peselWyp);
+    }
 
 
     /*public void wyswietlKomunikat(Event event) {

@@ -8,6 +8,65 @@
     <children>
         <TabPane prefHeight="450.0" prefWidth="350.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
+                <Tab fx:id="createAccountZ1" text="Utwórz konto">
+                    <content>
+                        <Pane prefHeight="481.0" prefWidth="768.0">
+                            <children>
+                                <Label fx:id="nameLabelZ1" layoutX="56.0" layoutY="21.0" prefHeight="47.0" prefWidth="73.0" text="    Imie ">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="nameFieldZ1" layoutX="172.0" layoutY="30.0" prefHeight="30.0" prefWidth="150.0" promptText="             Krzysztof" />
+                                <Label fx:id="lastNameLabelZ1" layoutX="31.0" layoutY="68.0" prefHeight="47.0" prefWidth="121.0" text="       Nazwisko">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="phoneFieldZ1" layoutX="172.0" layoutY="124.0" prefHeight="30.0" prefWidth="150.0" />
+                                <TextField fx:id="lastNameFieldZ1" layoutX="172.0" layoutY="77.0" prefHeight="30.0" prefWidth="150.0" promptText="              Kowalski" />
+                                <Label fx:id="phoneLabelZ1" layoutX="40.0" layoutY="115.0" prefHeight="47.0" prefWidth="103.0" text="    Telefon">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <RadioButton fx:id="womanRadioButtonZ1" layoutX="36.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="110.0" text="kobieta">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font></RadioButton>
+                                <CheckBox fx:id="acceptBoxZ1" layoutX="200.0" layoutY="332.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Akceptuję regulamin">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font></CheckBox>
+                                <RadioButton fx:id="manRadioButtonZ1" layoutX="126.0" layoutY="274.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="mężczyzna">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font></RadioButton>
+                                <Button fx:id="registerButtonZ1" layoutX="200.0" layoutY="367.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="144.0" text="Zarejestruj">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></Button>
+                                <Label fx:id="genderLabelZ1" layoutX="28.0" layoutY="244.0" prefHeight="35.0" prefWidth="50.0" text="  Płeć">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="dateOfBirthCalendarZ1" layoutX="172.0" layoutY="167.0" prefHeight="30.0" prefWidth="150.0" />
+                                <Label fx:id="dateOfBirthLabelZ1" layoutX="35.0" layoutY="158.0" prefHeight="47.0" prefWidth="114.0" text=" Data urodzenia">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                        <Label fx:id="peselLabelZ11" layoutX="66.0" layoutY="205.0" prefHeight="40.0" prefWidth="50.0" text=" Pesel">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="peselFieldZ11" layoutX="172.0" layoutY="210.0" prefHeight="30.0" prefWidth="150.0" promptText="              11-cyfr" />
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
                 <Tab fx:id="addCar1" text="Dodaj auto">
                     <content>
                         <Pane prefHeight="411.0" prefWidth="352.0">
@@ -19,7 +78,7 @@
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <Label fx:id="model1" layoutX="64.0" layoutY="86.0" prefHeight="33.0" prefWidth="52.0" text="Model">
+                                        <Label fx:id="modelLabel1" layoutX="64.0" layoutY="86.0" prefHeight="33.0" prefWidth="52.0" text="Model">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
@@ -28,122 +87,25 @@
                                             <font>
                                                 <Font size="15.0" />
                                             </font></Label>
-                                        <TextField fx:id="carBrandField1" layoutX="195.0" layoutY="35.0" prefHeight="31.0" prefWidth="135.0" promptText="Honda" />
-                                        <TextField fx:id="modelField1" layoutX="195.0" layoutY="87.0" prefHeight="31.0" prefWidth="135.0" promptText="CRV" />
-                                        <TextField fx:id="registrationNumberField1" layoutX="195.0" layoutY="138.0" prefHeight="31.0" prefWidth="135.0" promptText="ABC 12345" />
-                                        <Label fx:id="year1" layoutX="44.0" layoutY="187.0" prefHeight="37.0" prefWidth="115.0" text="Rok produkcji">
+                                        <TextField fx:id="carBrandField1" layoutX="180.0" layoutY="36.0" prefHeight="30.0" prefWidth="145.0" promptText="Honda" />
+                                        <TextField fx:id="modelField1" layoutX="180.0" layoutY="87.0" prefHeight="31.0" prefWidth="145.0" promptText="CRV" />
+                                        <TextField fx:id="registrationNumberField1" layoutX="180.0" layoutY="138.0" prefHeight="31.0" prefWidth="145.0" promptText="ABC 12345" />
+                                        <Label fx:id="yearLabel1" layoutX="44.0" layoutY="187.0" prefHeight="37.0" prefWidth="115.0" text="Rok produkcji">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="yearField1" layoutX="195.0" layoutY="190.0" prefHeight="31.0" prefWidth="135.0" text="2019" />
+                                        <TextField fx:id="yearField1" layoutX="180.0" layoutY="190.0" prefHeight="31.0" prefWidth="145.0" text="2019" />
                                         <CheckBox fx:id="haveHookBox1" layoutX="46.0" layoutY="299.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="hak" />
-                                        <ChoiceBox fx:id="fuelChoise1" layoutX="195.0" layoutY="244.0" prefHeight="31.0" prefWidth="135.0" />
+                                        <ChoiceBox fx:id="fuelChoise1" layoutX="180.0" layoutY="244.0" prefHeight="31.0" prefWidth="145.0" />
                                         <Label fx:id="kindOfFuel1" layoutX="46.0" layoutY="240.0" prefHeight="39.0" prefWidth="111.0" text="Rodzaj paliwa">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
                                         </Label>
-                                        <Button fx:id="addButton1" layoutX="202.0" layoutY="368.0" mnemonicParsing="false" onAction="#addCar" prefHeight="34.0" prefWidth="134.0" text="Dodaj" />
+                                        <Button fx:id="addButton1" layoutX="202.0" layoutY="360.0" mnemonicParsing="false" onAction="#addCar" prefHeight="41.0" prefWidth="123.0" text="Dodaj" />
                                     </children>
                                 </Pane>
-                            </children>
-                        </Pane>
-                    </content>
-                </Tab>
-                <Tab fx:id="checkCar2" text="Wypożycz ">
-                    <content>
-                        <Pane prefHeight="441.0" prefWidth="665.0">
-                            <children>
-                                <Pane layoutY="-1.0" prefHeight="422.0" prefWidth="350.0">
-                                    <children>
-                                        <ChoiceBox fx:id="brandCarChoise2" layoutX="174.0" layoutY="21.0" prefHeight="31.0" prefWidth="163.0" />
-                                        <Label fx:id="markaLabel2" layoutX="52.0" layoutY="18.0" prefHeight="36.0" prefWidth="75.0" text="    Marka">
-                                            <font>
-                                                <Font size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <ChoiceBox fx:id="modelCarChoise2" layoutX="174.0" layoutY="76.0" prefHeight="31.0" prefWidth="162.0" />
-                                        <Label fx:id="modelLabel2" layoutX="52.0" layoutY="75.0" prefHeight="34.0" prefWidth="75.0" text="    Model">
-                                            <font>
-                                                <Font size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <DatePicker fx:id="borrowDatePicker2" layoutX="174.0" layoutY="134.0" prefHeight="31.0" prefWidth="162.0" promptText="25/04/2020" />
-                                        <Label fx:id="borrowDate2" layoutX="19.0" layoutY="132.0" prefHeight="36.0" prefWidth="141.0" text="  Data wypożyczenia">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="backDate2" layoutX="20.0" layoutY="195.0" prefHeight="36.0" prefWidth="138.0" text="      Data zwrotu">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <DatePicker fx:id="backDatePicker2" layoutX="171.0" layoutY="197.0" prefHeight="31.0" prefWidth="165.0" promptText="28/04/2020" />
-                                        <Label fx:id="idNumber2" layoutX="24.0" layoutY="252.0" prefHeight="36.0" prefWidth="130.0" text=" ID wypożyczającego">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <TextField fx:id="idendityField2" layoutX="173.0" layoutY="254.0" prefHeight="31.0" prefWidth="165.0" text="123456789" />
-                                        <Button fx:id="hireButton2" layoutX="195.0" layoutY="367.0" mnemonicParsing="false" onAction="#hireCar" prefHeight="41.0" prefWidth="141.0" text="Wypożycz" />
-                                    </children>
-                                </Pane>
-                            </children>
-                        </Pane>
-                    </content>
-                </Tab>
-                <Tab fx:id="createAccountZ1" text="Utwórz konto">
-                    <content>
-                        <Pane prefHeight="481.0" prefWidth="768.0">
-                            <children>
-                                <Label fx:id="nameLabelZ1" layoutX="53.0" layoutY="13.0" prefHeight="47.0" prefWidth="73.0" text="    Imie ">
-                                    <font>
-                                        <Font size="16.0" />
-                                    </font>
-                                </Label>
-                                <TextField fx:id="nameFieldZ1" layoutX="163.0" layoutY="20.0" prefHeight="33.0" prefWidth="171.0" />
-                                <Label fx:id="LastNameLabelZ1" layoutX="29.0" layoutY="68.0" prefHeight="47.0" prefWidth="121.0" text="       Nazwisko">
-                                    <font>
-                                        <Font size="16.0" />
-                                    </font>
-                                </Label>
-                                <TextField fx:id="phoneFieldZ1" layoutX="164.0" layoutY="138.0" prefHeight="31.0" prefWidth="171.0" />
-                                <TextField fx:id="lastNameFieldZ1" layoutX="163.0" layoutY="75.0" prefHeight="32.0" prefWidth="171.0" />
-                                <Label fx:id="phoneLabelZ1" layoutX="39.0" layoutY="130.0" prefHeight="47.0" prefWidth="103.0" text="    Telefon">
-                                    <font>
-                                        <Font size="16.0" />
-                                    </font>
-                                </Label>
-                                <RadioButton fx:id="womanRadioButtonZ1" layoutX="53.0" layoutY="260.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="110.0" text="kobieta">
-                                    <font>
-                                        <Font size="13.0" />
-                                    </font></RadioButton>
-                                <CheckBox fx:id="acceptBoxZ1" layoutX="173.0" layoutY="332.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Akceptuję regulain">
-                                    <font>
-                                        <Font size="13.0" />
-                                    </font></CheckBox>
-                                <RadioButton fx:id="manRadioButtonZ1" layoutX="175.0" layoutY="260.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" text="mężczyzna">
-                                    <font>
-                                        <Font size="13.0" />
-                                    </font></RadioButton>
-                                <Button fx:id="registerButtonZ1" layoutX="172.0" layoutY="367.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="167.0" text="Zarejestruj">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font></Button>
-                                <Label fx:id="genderLabelZ1" layoutX="6.0" layoutY="229.0" prefHeight="47.0" prefWidth="94.0" text="    Płeć">
-                                    <font>
-                                        <Font size="16.0" />
-                                    </font>
-                                </Label>
-                                <DatePicker fx:id="dateOfBirthCalendarZ1" layoutX="163.0" layoutY="193.0" prefHeight="36.0" prefWidth="172.0" />
-                                <Label fx:id="dateOfBirthLabelZ1" layoutX="33.0" layoutY="188.0" prefHeight="47.0" prefWidth="114.0" text=" Data urodzenia">
-                                    <font>
-                                        <Font size="16.0" />
-                                    </font>
-                                </Label>
-                                <Pane layoutX="316.0" layoutY="3.0" prefHeight="451.0" prefWidth="324.0" />
                             </children>
                         </Pane>
                     </content>
@@ -158,7 +120,7 @@
                                     </font>
                                 </Label>
                                 <ChoiceBox fx:id="brandCarChoiseZ2" layoutX="193.0" layoutY="50.0" prefHeight="32.0" prefWidth="137.0" />
-                                <ChoiceBox fx:id="howDaysChoiseZ2" layoutX="191.0" layoutY="170.0" prefHeight="31.0" prefWidth="141.0" />
+                                <ChoiceBox fx:id="howDaysChoiseZ2" layoutX="194.0" layoutY="170.0" prefHeight="31.0" prefWidth="138.0" />
                                 <ChoiceBox fx:id="modelCarChoiseZ2" layoutX="192.0" layoutY="109.0" prefHeight="32.0" prefWidth="139.0" />
                                 <Label fx:id="modelLabelZ2" layoutX="65.0" layoutY="103.0" prefHeight="44.0" prefWidth="58.0" text=" Model">
                                     <font>
@@ -182,7 +144,7 @@
                                     <font>
                                         <Font size="13.0" />
                                     </font></CheckBox>
-                                <Button fx:id="checkButtonZ2" layoutX="202.0" layoutY="367.0" mnemonicParsing="false" onAction="#checkOffer" prefHeight="39.0" prefWidth="134.0" text="Sprawdź">
+                                <Button fx:id="checkButtonZ2" layoutX="220.0" layoutY="367.0" mnemonicParsing="false" onAction="#checkOffer" prefHeight="39.0" prefWidth="116.0" text="Sprawdź">
                                     <font>
                                         <Font size="14.0" />
                                     </font></Button>
@@ -191,6 +153,61 @@
                                         <Font name="System Bold Italic" size="18.0" />
                                     </font>
                                 </Label>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab fx:id="checkCar2" text="Wypożycz ">
+                    <content>
+                        <Pane prefHeight="441.0" prefWidth="665.0">
+                            <children>
+                                <Pane layoutY="-1.0" prefHeight="422.0" prefWidth="350.0">
+                                    <children>
+                                        <ChoiceBox fx:id="brandCarChoise2" layoutX="186.0" layoutY="29.0" prefHeight="31.0" prefWidth="150.0" />
+                                        <Label fx:id="markaLabel2" layoutX="52.0" layoutY="27.0" prefHeight="36.0" prefWidth="75.0" text="    Marka">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <ChoiceBox fx:id="modelCarChoise2" layoutX="186.0" layoutY="78.0" prefHeight="31.0" prefWidth="150.0" />
+                                        <Label fx:id="modelLabel2" layoutX="52.0" layoutY="77.0" prefHeight="34.0" prefWidth="75.0" text="    Model">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <DatePicker fx:id="borrowDatePicker2" layoutX="186.0" layoutY="126.0" prefHeight="31.0" prefWidth="150.0" promptText="25/04/2020" />
+                                        <Label fx:id="borrowDate2" layoutX="25.0" layoutY="124.0" prefHeight="36.0" prefWidth="145.0" text="  Data wypożyczenia">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="backDate2" layoutX="35.0" layoutY="171.0" prefHeight="36.0" prefWidth="124.0" text="   Data zwrotu">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <DatePicker fx:id="backDatePicker2" layoutX="186.0" layoutY="174.0" prefHeight="31.0" prefWidth="150.0" promptText="28/04/2020" />
+                                        <Label fx:id="nameLabelW2" layoutX="64.0" layoutY="221.0" prefHeight="36.0" prefWidth="51.0" text="  Imie">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="nameFieldW2" layoutX="186.0" layoutY="223.0" prefHeight="31.0" prefWidth="150.0" promptText="                Krzysztof" />
+                                        <Button fx:id="hireButton2" layoutX="195.0" layoutY="367.0" mnemonicParsing="false" onAction="#hireCar" prefHeight="41.0" prefWidth="141.0" text="Wypożycz" />
+                              <Label fx:id="lastNameLabelW2" layoutX="50.0" layoutY="265.0" prefHeight="36.0" prefWidth="80.0" text="Nazwisko">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lastNameFieldW2" layoutX="186.0" layoutY="270.0" prefHeight="31.0" prefWidth="150.0" promptText="                Kowalski" />
+                              <TextField fx:id="peselNumberField2" layoutX="186.0" layoutY="316.0" prefHeight="31.0" prefWidth="150.0" promptText="                11-cyfr" />
+                              <Label fx:id="peselNumberLabelW2" layoutX="50.0" layoutY="314.0" prefHeight="36.0" prefWidth="80.0" text="    Pesel">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </Pane>
                             </children>
                         </Pane>
                     </content>
