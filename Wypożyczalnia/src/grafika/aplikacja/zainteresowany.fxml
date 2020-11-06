@@ -30,7 +30,7 @@
                                                             </font>
                                                         </Label>
                                                         <TextField fx:id="phoneFieldZ1" layoutX="129.0" layoutY="130.0" prefHeight="31.0" prefWidth="171.0" />
-                                                        <TextField fx:id="LastNameFieldZ1" layoutX="129.0" layoutY="75.0" prefHeight="32.0" prefWidth="171.0" />
+                                                        <TextField fx:id="lastNameFieldZ1" layoutX="129.0" layoutY="75.0" prefHeight="32.0" prefWidth="171.0" />
                                                         <Label fx:id="phoneLabelZ1" layoutX="22.0" layoutY="122.0" prefHeight="47.0" prefWidth="103.0" text="    Telefon">
                                                             <font>
                                                                 <Font size="16.0" />
@@ -48,7 +48,7 @@
                                              <font>
                                                 <Font size="13.0" />
                                              </font></RadioButton>
-                                                        <Button fx:id="registerButtonZ1" layoutX="140.0" layoutY="382.0" mnemonicParsing="false" onAction="#wyswietlKomunikat" prefHeight="39.0" prefWidth="167.0" text="Zarejestruj">
+                                                        <Button fx:id="registerButtonZ1" layoutX="140.0" layoutY="382.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="167.0" text="Zarejestruj">
                                              <font>
                                                 <Font size="14.0" />
                                              </font></Button>
@@ -58,7 +58,7 @@
                                                             </font>
                                                         </Label>
                                                         <DatePicker fx:id="dateOfBirthCalendarZ1" layoutX="128.0" layoutY="192.0" prefHeight="36.0" prefWidth="172.0" />
-                                                        <Label fx:id="dateOfBirthLabelZ1" layoutX="6.0" layoutY="187.0" prefHeight="47.0" prefWidth="122.0" text="   Data urodzenia">
+                                                        <Label fx:id="dateOfBirthLabelZ1" layoutX="6.0" layoutY="187.0" prefHeight="47.0" prefWidth="122.0" text=" Data urodzenia">
                                                             <font>
                                                                 <Font size="16.0" />
                                                             </font>
@@ -90,7 +90,7 @@
                                                                 <Font size="16.0" />
                                                             </font>
                                                         </Label>
-                                                        <CheckBox fx:id="extraInsuaranceBoxZ2" layoutX="35.0" layoutY="303.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="176.0" text="Dodatkowe ubezpieczenie">
+                                                        <CheckBox fx:id="extraInsuaranceBoxZ2" layoutX="35.0" layoutY="349.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="176.0" text="Dodatkowe ubezpieczenie">
                                              <font>
                                                 <Font size="13.0" />
                                              </font></CheckBox>
@@ -98,12 +98,12 @@
                                              <font>
                                                 <Font size="13.0" />
                                              </font></CheckBox>
-                                                        <CheckBox fx:id="bagaznikNartyBoxZ2" layoutX="35.0" layoutY="341.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="201.0" text="Bagażnik na narty">
+                                                        <CheckBox fx:id="bagaznikNartyBoxZ2" layoutX="35.0" layoutY="303.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="201.0" text="Bagażnik na narty">
                                              <font>
                                                 <Font size="13.0" />
                                              </font></CheckBox>
                                                         <Pane layoutX="285.0" layoutY="-3.0" prefHeight="455.0" prefWidth="355.0" />
-                                                        <Button fx:id="chechButtonZ2" layoutX="143.0" layoutY="384.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" text="Sprawdź">
+                                                        <Button fx:id="checkButtonZ2" layoutX="143.0" layoutY="384.0" mnemonicParsing="false" onAction="#checkCar" prefHeight="39.0" prefWidth="134.0" text="Sprawdź">
                                              <font>
                                                 <Font size="14.0" />
                                              </font></Button>

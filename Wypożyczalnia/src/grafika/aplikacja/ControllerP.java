@@ -107,8 +107,8 @@ public class ControllerP {
     }
 
 
-    public void wyswietlKomunikat(Event event) {
+    /*public void wyswietlKomunikat(Event event) {
         System.out.println(event.getSource());
         System.out.println("Przycisk działa !");
-    }
+    }*/
 }
