@@ -17,11 +17,27 @@ public class ControllerP {
     Garaz garaz = new Garaz();
     Spolecznosc spolecznosc = new Spolecznosc();
     KatalogWypozyczen katalog = new KatalogWypozyczen();
+    {
+        //-------------------------Samochody w bazie(symulacja garażu)----------------------------------------------------
+        garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
+        garaz.dodajAuto("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
+        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
+        //-------------------------Osoby w bazie(symulacja społeczności)----------------------------------------------------
+        spolecznosc.addPerson("Jan1","Kowalski1",123456789, Date.valueOf("1999-05-28"),12345678910L,'M');
+        spolecznosc.addPerson("Jan1","Kowalski1",125601782, Date.valueOf("1997-01-17"),12345678911L,'K');
+        spolecznosc.addPerson("Jan2","Kowalski2",987654321, Date.valueOf("1998-09-30"),12345678912L,'M');
+        //-------------------------Wypożyczenia w bazie(symulacja katalogu wypożyczeń)----------------------------------------------------
+        katalog.dodajWypozyczenie("Opel","Astra H",Date.valueOf("1999-05-28"),Date.valueOf("1999-05-30"),"Jan","Nowak",12345678910L);
+        katalog.dodajWypozyczenie("Skoda","Octavia",Date.valueOf("2003-05-28"),Date.valueOf("2008-05-30"),"Robert","Kowalski",93345678910L);
+        katalog.dodajWypozyczenie("Audi","A4",Date.valueOf("2000-05-28"),Date.valueOf("2000-05-30"),"Stanislaw","Rak",12345654910L);
+    }
 
-    ObservableList<String> marka = FXCollections.observableArrayList("Fiat","Opel","Skoda","Toyota","VolksWagen");
+    //ObservableList<String> marka = FXCollections.observableArrayList("Fiat","Opel","Skoda","Toyota","VolksWagen");
+    ObservableList<String> marka = FXCollections.observableArrayList();
     ObservableList<String> model = FXCollections.observableArrayList("Tipo","Astra H","Octavia","Yaris","Golf IV");
     ObservableList<String> paliwo = FXCollections.observableArrayList("Benzyna","Diesel","Benzyna + LPG");
     ObservableList<String> dni = FXCollections.observableArrayList("10","20","30","50","100");
+
 
     //---------------ChoiceBox-----------------------
     @FXML
@@ -49,14 +65,22 @@ public class ControllerP {
 
 
     @FXML
-    private void initialize(){
+    private void initialize() {
+
+        for(int i = 0; i < garaz.ileAut(); i++) {
+                marka.add(garaz.getAuto(i).getMarka());
+        }
+        for(int i = 0; i < garaz.ileAut(); i++) {
+                System.out.println(marka.get(i));
+        }
+
         //wybór paliwa
         fuelChoise1.setValue("Benzyna");
         fuelChoise1.setItems(paliwo);
         //wybór marki
-        brandCarChoise2.setValue("VolksWagen");
+        brandCarChoise2.setValue(marka.get(0));
         brandCarChoise2.setItems(marka);
-        brandCarChoiseZ2.setValue("VolksWagen");
+        brandCarChoiseZ2.setValue(marka.get(0));
         brandCarChoiseZ2.setItems(marka);
         //wybór modelu
         modelCarChoise2.setValue("Golf IV");
@@ -77,9 +101,14 @@ public class ControllerP {
         long nrPesel = Long.valueOf(String.valueOf(peselFieldZ11.getCharacters()));
         boolean kobieta = womanRadioButtonZ1.isSelected(),facet = manRadioButtonZ1.isSelected();
         char plec = 'M';
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informacja");
+        alert.setHeaderText(null);
+
         if(acceptBoxZ1.isSelected())
         {
-            System.out.println("Zarejestrowano:");
+            alert.setContentText("Konto zostało utworzone!");
 
             if(kobieta && facet == false){
                 plec = 'K';
@@ -96,18 +125,16 @@ public class ControllerP {
                 manRadioButtonZ1.fire();
                 plec = 'M';
             }
-            //--------------------Symulacja--bazy---------------------------
-            spolecznosc.addPerson("Jan1","Kowalski1",123456789, Date.valueOf("1999-05-28"),12345678910L,'M');
-            spolecznosc.addPerson("Jan1","Kowalski1",125601782, Date.valueOf("1997-01-17"),12345678911L,'K');
-            spolecznosc.addPerson("Jan2","Kowalski2",987654321, Date.valueOf("1998-09-30"),12345678912L,'M');
-            //--------------------KONIEC--SYMULACJI--------------------------
+
             spolecznosc.addPerson(imie,nazwisko,nrTel,dataUro,nrPesel,plec);
         }
         else
         {
-            System.out.println("Akceptacja regulaminu jest obowiązkowa!");
+            alert.setContentText("Akceptacja regulaminu jest obowiązkowa!");;
         }
         spolecznosc.wyswietlSpolecznosc();
+
+        alert.showAndWait();
     }
 
     @FXML
@@ -119,13 +146,15 @@ public class ControllerP {
         String fuel = String.valueOf(fuelChoise1.getValue());
         boolean hak = haveHookBox1.isSelected();
 
-        //-------------------------Samochody w bazie(symulacja bazy)----------------------------------------------------
-        garaz.dodajAuto("Opel", "Astra", "TKI 48125", 2008, "benzyna", false);
-        garaz.dodajAuto("Opel", "Insignia", "TKI 21835", 2014, "benzyna + LPG", true);
-        garaz.dodajAuto("Skoda", "Octavia", "TKI 31478", 2017, "diesel", false);
-        //--------------------------------------KONIEC--SYMULACJI-------------------------------------------------------
         garaz.dodajAuto(marka,model,nrRejestracyjny,rocznik,fuel,hak);
         garaz.wyswietlGaraz();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informacja");
+        alert.setHeaderText(null);
+        alert.setContentText(marka + " " + model + " " + nrRejestracyjny + " " + "został dodany");
+
+        alert.showAndWait();
     }
 
     @FXML
@@ -149,6 +178,12 @@ public class ControllerP {
             System.out.println(" brak");
         }
 
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informacja");
+        alert.setHeaderText(null);
+        alert.setContentText(marka + " " + model + " na " + iloscDob + " dni " + "kosztuje: ");
+
+        alert.showAndWait();
     }
 
     @FXML
@@ -160,16 +195,16 @@ public class ControllerP {
         String imieWyp = String.valueOf(nameFieldW2.getCharacters());
         String nazwiskoWyp = String.valueOf(lastNameFieldW2.getCharacters());
         Long peselWyp = Long.valueOf(String.valueOf(peselNumberField2.getCharacters()));
-        //----------------Symulacja--bazy-------------------------------------------------------------------------------
-        katalog.dodajWypozyczenie("Opel","Astra H",Date.valueOf("1999-05-28"),Date.valueOf("1999-05-30"),
-                "Jan","Nowak",12345678910L);
-        katalog.dodajWypozyczenie("Skoda","Octavia",Date.valueOf("2003-05-28"),Date.valueOf("2008-05-30"),
-                "Robert","Kowalski",93345678910L);
-        katalog.dodajWypozyczenie("Audi","A4",Date.valueOf("2000-05-28"),Date.valueOf("2000-05-30"),
-                "Stanislaw","Rak",12345654910L);
-        //-------------------koniec---symulacji-------------------------------------------------------------------------
+
         katalog.dodajWypozyczenie(marka,model,dataWypozyczenia,dataOddania,imieWyp,nazwiskoWyp,peselWyp);
         katalog.wyswietlKatalogWypozyczen();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informacja");
+        alert.setHeaderText(null);
+        alert.setContentText(marka + " " + model + " od dnia " + dataWypozyczenia + " do dnia " + dataOddania + " został wypożyczony!");
+
+        alert.showAndWait();
     }
 
 
