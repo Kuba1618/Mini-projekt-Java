@@ -205,37 +205,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586525989990" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586798805755">
+    <state x="230" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587395276505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586798805755" />
+    <state x="230" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587395276505" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1586521276760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586521276760" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586885248000">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587328349123">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586885248000" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587328349123" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586803030158">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586803030158" />
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom" timestamp="1586887466089">
+    <state width="1493" height="95" key="GridCell.Tab.0.bottom" timestamp="1587395370452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586887466089" />
-    <state width="1493" height="80" key="GridCell.Tab.0.center" timestamp="1586887466089">
+    <state width="1493" height="95" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587395370452" />
+    <state width="1493" height="95" key="GridCell.Tab.0.center" timestamp="1587395370452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586887466089" />
-    <state width="1493" height="80" key="GridCell.Tab.0.left" timestamp="1586887466089">
+    <state width="1493" height="95" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587395370452" />
+    <state width="1493" height="95" key="GridCell.Tab.0.left" timestamp="1587395370452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586887466089" />
-    <state width="1493" height="80" key="GridCell.Tab.0.right" timestamp="1586887466089">
+    <state width="1493" height="95" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587395370452" />
+    <state width="1493" height="95" key="GridCell.Tab.0.right" timestamp="1587395370452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586887466089" />
+    <state width="1493" height="95" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587395370452" />
   </component>
 </project>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="643.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="addCar1" text="Dodaj auto">
+                    <content>
+                        <Pane prefHeight="275.0" prefWidth="601.0">
+                            <children>
+                                <Pane layoutY="1.0" prefHeight="360.0" prefWidth="294.0">
+                                    <children>
+                                        <Label fx:id="carBrand1" layoutX="35.0" layoutY="32.0" prefHeight="37.0" prefWidth="57.0" text="Marka">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="model1" layoutX="35.0" layoutY="79.0" prefHeight="37.0" prefWidth="57.0" text="Model">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="registerNumber1" layoutX="7.0" layoutY="135.0" prefHeight="37.0" prefWidth="106.0" text="Nr rejestracyjny" />
+                                        <TextField fx:id="carBrandField1" layoutX="131.0" layoutY="35.0" prefHeight="31.0" prefWidth="147.0" />
+                                        <TextField fx:id="modelField1" layoutX="131.0" layoutY="82.0" prefHeight="31.0" prefWidth="147.0" />
+                                        <TextField fx:id="registrationNumberField1" layoutX="131.0" layoutY="138.0" prefHeight="31.0" prefWidth="147.0" />
+                                        <Label fx:id="Colour1" layoutX="35.0" layoutY="180.0" prefHeight="37.0" prefWidth="57.0" text=" Kolor">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="colourField1" layoutX="131.0" layoutY="183.0" prefHeight="31.0" prefWidth="147.0" />
+                                        <CheckBox fx:id="haveHookCheckBox1" layoutX="48.0" layoutY="306.0" mnemonicParsing="false" text="hak" />
+                                        <ChoiceBox fx:id="fuelChoise1" layoutX="130.0" layoutY="241.0" prefWidth="150.0" />
+                                        <Label fx:id="kindOfFuel1" layoutX="7.0" layoutY="238.0" prefHeight="37.0" prefWidth="109.0" text="Rodzaj paliwa">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="addButton1" layoutX="130.0" layoutY="301.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="147.0" text="Dodaj" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="301.0" layoutY="1.0" prefHeight="361.0" prefWidth="298.0" />
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab fx:id="checkCar21" text="Wypożycz ">
+                    <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="38.0" layoutY="17.0" prefHeight="36.0" prefWidth="91.0" text="    Marka">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="38.0" layoutY="75.0" prefHeight="36.0" prefWidth="91.0" text="    Model">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker layoutX="166.0" layoutY="131.0" prefHeight="31.0" prefWidth="158.0" />
+                                <ChoiceBox fx:id="carBrandChoise21" layoutX="164.0" layoutY="20.0" prefHeight="31.0" prefWidth="158.0" />
+                                <ChoiceBox fx:id="carBrandChoise211" layoutX="166.0" layoutY="77.0" prefHeight="31.0" prefWidth="158.0" />
+                                <DatePicker layoutX="166.0" layoutY="191.0" prefHeight="31.0" prefWidth="160.0" />
+                                <Label layoutX="8.0" layoutY="128.0" prefHeight="36.0" prefWidth="138.0" text="Data wypożyczenia">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="8.0" layoutY="186.0" prefHeight="36.0" prefWidth="138.0" text="    Data zwrotu">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="6.0" layoutY="239.0" prefHeight="36.0" prefWidth="143.0" text="ID wypożyczającego">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField layoutX="165.0" layoutY="242.0" prefHeight="31.0" prefWidth="161.0" />
+                        <Button layoutX="186.0" layoutY="301.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="115.0" text="Wypożycz" />
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab fx:id="checkCar2" text="Sprawdź wypozyczenie">
+                    <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Pane layoutY="1.0" prefHeight="360.0" prefWidth="278.0">
+                                    <children>
+                                        <Label fx:id="carBrand2" layoutX="26.0" layoutY="53.0" prefHeight="37.0" prefWidth="69.0" text="   Marka">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="model2" layoutX="26.0" layoutY="112.0" prefHeight="37.0" prefWidth="69.0" text="   Model">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <ChoiceBox fx:id="carBrandChoise2" layoutX="114.0" layoutY="56.0" prefWidth="150.0" />
+                                        <ChoiceBox fx:id="modelChoise2" layoutX="114.0" layoutY="115.0" prefWidth="150.0" />
+                                        <Label fx:id="registerNumber2" layoutX="8.0" layoutY="211.0" prefHeight="37.0" prefWidth="106.0" text="Nr rejestracyjny" />
+                                        <ChoiceBox fx:id="registerNumberChoise2" layoutX="113.0" layoutY="214.0" prefWidth="150.0" />
+                                        <Label fx:id="carBrand2" layoutX="90.0" layoutY="8.0" prefHeight="37.0" prefWidth="98.0" text="   Wybierz">
+                                            <font>
+                                                <Font name="System Bold Italic" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="carBrand2" layoutX="90.0" layoutY="162.0" prefHeight="37.0" prefWidth="98.0" text="        lub">
+                                            <font>
+                                                <Font name="System Bold Italic" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="findButton2" layoutX="164.0" layoutY="290.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="99.0" text="Wyszukaj" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>
