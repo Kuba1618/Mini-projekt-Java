@@ -17,13 +17,11 @@ public class ControllerP {
 
     //---------------ChoiceBox-----------------------
     @FXML
-    private ChoiceBox fuelChoise1;
+    private ChoiceBox fuelChoise1,howDaysChoiseZ2;
     @FXML
-    private ChoiceBox brandCarChoise2,brandCarChoise3,brandCarChoiseZ2;
+    private ChoiceBox brandCarChoise2,brandCarChoiseZ2;
     @FXML
-    private ChoiceBox modelCarChoise2,modelCarChoise3,modelCarChoiseZ2;
-    @FXML
-    private ChoiceBox registerNumberChoise3,howDaysChoiseZ2;
+    private ChoiceBox modelCarChoise2,modelCarChoiseZ2;
     //---------------TextField------------------------
     @FXML
     private TextField carBrandField1,modelField1,registrationNumberField1,yearField1,idendityField2;
@@ -40,9 +38,7 @@ public class ControllerP {
     //--------------RadioButton------------------
     @FXML
     private RadioButton womanRadioButtonZ1,manRadioButtonZ1;
-    /* @FXML
-    private Button registerButtonZ1,checkButtonZ2;
-    */
+
 
     @FXML
     private void initialize(){
@@ -52,20 +48,13 @@ public class ControllerP {
         //wybór marki
         brandCarChoise2.setValue("VolksWagen");
         brandCarChoise2.setItems(marka);
-        brandCarChoise3.setValue("VolksWagen");
-        brandCarChoise3.setItems(marka);
         brandCarChoiseZ2.setValue("VolksWagen");
         brandCarChoiseZ2.setItems(marka);
         //wybór modelu
         modelCarChoise2.setValue("Golf IV");
         modelCarChoise2.setItems(model);
-        modelCarChoise3.setValue("Golf IV");
-        modelCarChoise3.setItems(model);
         modelCarChoiseZ2.setValue("Golf IV");
         modelCarChoiseZ2.setItems(model);
-        //wybór rejestracji
-        registerNumberChoise3.setValue("TKI 12345");
-        registerNumberChoise3.setItems(rejestracja);
         //na ile dni wypozyczyc auto
         howDaysChoiseZ2.setValue("30");
         howDaysChoiseZ2.setItems(dni);
@@ -99,15 +88,6 @@ public class ControllerP {
 
         System.out.println("Marka:" + marka + "  Model:" + model + "  Data Wypożyczenia:" + dataWypozyczenia +
                 "  Data oddania:" + dataOddania + "  Id wypozyczającego:" + idWypozyczajacego);
-    }
-
-    @FXML
-    private void checkCar(){
-        String marka = String.valueOf(brandCarChoise3.getValue());
-        String model = String.valueOf(modelCarChoise3.getValue());
-
-        System.out.print("Marka:" + marka + "  Model:" + model );
-
     }
 
     @FXML

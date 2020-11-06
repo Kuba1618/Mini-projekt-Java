@@ -95,46 +95,6 @@
                         </Pane>
                     </content>
                 </Tab>
-                <Tab fx:id="checkCar3" text="Sprawdź wypozyczenie">
-                    <content>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
-                            <children>
-                                <Pane layoutY="1.0" prefHeight="447.0" prefWidth="283.0">
-                                    <children>
-                                        <Label fx:id="carBrand3" layoutX="26.0" layoutY="69.0" prefHeight="37.0" prefWidth="69.0" text="   Marka">
-                                            <font>
-                                                <Font size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="model3" layoutX="26.0" layoutY="125.0" prefHeight="37.0" prefWidth="69.0" text="   Model">
-                                            <font>
-                                                <Font size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <ChoiceBox fx:id="brandCarChoise3" layoutX="133.0" layoutY="72.0" prefHeight="31.0" prefWidth="128.0" />
-                                        <ChoiceBox fx:id="modelCarChoise3" layoutX="133.0" layoutY="131.0" prefHeight="31.0" prefWidth="128.0" />
-                                        <Label fx:id="registerNumber3" layoutX="14.0" layoutY="249.0" prefHeight="37.0" prefWidth="106.0" text="Nr rejestracyjny">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font></Label>
-                                        <ChoiceBox fx:id="registerNumberChoise3" layoutX="133.0" layoutY="251.0" prefHeight="32.0" prefWidth="131.0" />
-                                        <Label fx:id="chooseLabel" layoutX="74.0" layoutY="14.0" prefHeight="37.0" prefWidth="98.0" text="   Wybierz">
-                                            <font>
-                                                <Font name="System Bold Italic" size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="orLabel" layoutX="74.0" layoutY="190.0" prefHeight="37.0" prefWidth="98.0" text="        lub">
-                                            <font>
-                                                <Font name="System Bold Italic" size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <Button fx:id="findButton3" layoutX="159.0" layoutY="366.0" mnemonicParsing="false" onAction="#checkCar" prefHeight="43.0" prefWidth="112.0" text="Wyszukaj" />
-                                    </children>
-                                </Pane>
-                            </children>
-                        </Pane>
-                    </content>
-                </Tab>
                 <Tab fx:id="createAccountZ1" text="Utwórz konto">
                     <content>
                         <Pane prefHeight="481.0" prefWidth="768.0">
