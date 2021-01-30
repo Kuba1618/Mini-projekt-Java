@@ -1,3 +1,4 @@
-# Mini-projekt-Java
-Wypożyczalnia samochodów
-Aby móc uruchomić ten kod należy zainstalować JavaFx oraz xamp(gdzie tworzymy bazę danych za pomocą gotowego skryptu MySQL podanego razem z projektem)
+# Mini-project-Java
+Rent-a-car
+To run this application you should install JavaFx and xamp(and create database using my MySQL script include to the project).
+
